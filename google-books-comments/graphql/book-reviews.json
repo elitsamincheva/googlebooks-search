@@ -1,0 +1,21 @@
+[
+    {
+        "id": "kLAoswEACAAJ",
+        "upVotes": 5,
+        "downVotes": 2,
+        "comments": [
+            {
+                "id": 0,
+                "author": "Lord Voldemort",
+                "text": "This book sucks!",
+                "secret": "boo"
+            },
+            {
+                "id": 1,
+                "author": "Harry Potter",
+                "text": "My life!",
+                "secret": "blah"
+            }
+        ]
+    }
+]

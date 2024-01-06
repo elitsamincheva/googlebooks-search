@@ -1,0 +1,45 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Query{
+    booksSearch(searchTerms: String, offset: Int, limit: Int): [Book]
+    bookReview(id: String): Review
+}
+
+type Mutation{
+  addComment(id: String, author: String, text: String, secret: String): Review
+  updateComment(id: String, commentId: Int, text: String, secret: String): Review
+  deleteComment(id: String, commentId: Int, secret: String): Boolean
+  upVote(id: String): Review
+  downVote(id: String): Review
+}
+
+type Comment {
+  id: Int
+  author: String
+  text: String
+}
+
+type Review {
+  id: String
+  upVotes: Int
+  downVotes: Int
+  comments: [Comment]
+}
+
+type Book {
+    id: String
+    title: String
+    authors: String
+    publisher: String
+    publishedDate: String
+    description: String
+    pageCount: Int
+    language: String
+    thumbnail: String
+    categories: String
+    averageRating: Int
+    ratingsCount: Int
+}
